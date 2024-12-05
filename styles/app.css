@@ -22,15 +22,28 @@ form {
       color: var(--content-tertiary);
       font: 400 1.6rem/2.2rem var(--ff-inter);
     }
+
+    &:hover {
+      border-color: var(--border-hover);
+    }
+
+    &:focus {
+      outline-color: var(--color-brand);
+    }
   }
 
   & button {
-    background: var(--color-brand);
+    background-color: var(--color-brand);
     border: none;
     border-radius: 1.2rem;
     color: var(--always-white);
+    cursor: pointer;
     font: var(--label);
     padding: 1.2rem 2.4rem;
+
+    &:hover {
+      background-color: var(--color-brand-hover);
+    }
   }
 }
 
@@ -53,6 +66,35 @@ ul[role="list"] {
       display: flex;
       align-items: center;
       gap: 1.2rem;
+
+      position: relative;
+
+      & #iconCheck {
+        width: 1.6rem;
+        height: 1.6rem;
+
+        background-color: var(--bg-secondary);
+        border: solid var(--border-primary);
+        border-radius: 0.6rem;
+      }
+
+      & input {
+        all: unset;
+        inset: 0;
+        position: absolute;
+      }
+
+      &:has(input:checked) {
+        & #iconCheck {
+          background: url(../assets/icons/checked.svg) no-repeat center / cover;
+          background-color: var(--color-brand);
+          border-color: var(--color-brand);
+        }
+
+        & span {
+          text-decoration: line-through;
+        }
+      }
     }
   }
 
@@ -74,6 +116,15 @@ ul[role="list"] {
   &::-webkit-scrollbar-thumb:hover {
     background: #555;
   }
+}
+
+#delete {
+  width: 1.6rem;
+  height: 1.6rem;
+
+  background: url(../assets/icons/delete.svg) no-repeat center / cover;
+  border: none;
+  cursor: pointer;
 }
 
 #alert {

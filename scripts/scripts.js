@@ -32,6 +32,7 @@ let numberId = 1
 function addNewItem() {
   const li = document.createElement("li")
   const label = document.createElement("label")
+  const div = document.createElement("div")
   const input = document.createElement("input")
   const itemName = document.createElement("span")
   const button = document.createElement("button")
@@ -39,6 +40,7 @@ function addNewItem() {
   // Adicionando atributos aos elementos.
   li.id = `item-${numberId++}`
   li.classList.add("items")
+  div.id = "iconCheck"
   input.type = "checkbox"
   button.type = "button"
   button.id = "delete"
@@ -58,7 +60,7 @@ function addNewItem() {
     // Adiciona os elementos criados ao HTML.
     ul.prepend(li)
     li.append(label, button)
-    label.append(input, itemName)
+    label.append(div, input, itemName)
 
     // Span recebe o valor inserido no input.
     itemName.textContent = inputNewItem.value
