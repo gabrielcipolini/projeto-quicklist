@@ -1,0 +1,26 @@
+.container {
+  --px-base: 3.2rem;
+  --max-width: 37.5rem;
+  width: min(var(--max-width), 100% - var(--px-base) * 2);
+  margin-inline: auto;
+}
+
+.desktop-only {
+  display: none;
+}
+
+.logo {
+  text-align: center;
+  width: fit-content;
+}
+
+@media (width >= 800px) {
+  .container {
+    --px-base: 6.4rem;
+    --max-width: 62.7rem;
+  }
+
+  .desktop-only {
+    display: inherit;
+  }
+}

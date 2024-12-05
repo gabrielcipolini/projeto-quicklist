@@ -37,3 +37,14 @@
   --paragraph: 500 1.6rem/2.4rem var(--ff-inter);
   --link: 500 1.4rem/1.6rem var(--ff-inter);
 }
+
+html,
+body {
+  color: var(--content-secondary);
+  font: var(--paragraph);
+}
+
+body {
+  background-color: var(--bg-primary);
+  overflow-x: hidden;
+}
