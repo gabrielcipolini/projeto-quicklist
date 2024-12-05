@@ -5,7 +5,7 @@
 
 - [Sobre](#sobre)  
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)  
-- [Práticas Aplicadas](#trabalhei-com)  
+- [Habilidades Praticadas](#habilidades-praticadas)  
 - [Instalação](#instalação)  
 
 ## Sobre  
@@ -16,13 +16,13 @@ Este projeto abrange desde a criação da estrutura com **HTML e CSS** até a im
 
 Estou extremamente satisfeito com o resultado alcançado, que demonstra meu progresso ao longo do curso e o impacto do conteúdo até aqui. Explore o código, experimente a aplicação e sinta-se à vontade para deixar seu feedback! 🚀  
 
-## Tecnologias  
+## Tecnologias Utilizadas 
 
 - **HTML**  
 - **CSS**  
 - **JavaScript**  
 
-## Trabalhei com
+## Habilidades Praticadas
 
 - **Funções e organização de código**  
 - **Eventos da DOM**  
