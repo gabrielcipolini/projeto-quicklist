@@ -1,0 +1,39 @@
+* {
+  font: inherit;
+  margin: 0;
+  padding: 0;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --bg-primary: #f4f5fb;
+  --bg-secondary: #ffff;
+
+  --color-brand: #ca3884;
+  --color-brand-hover: #a52c6b;
+  --color-danger: #c93847;
+
+  --content-primary: #080b12;
+  --content-secondary: #374151;
+  --content-tertiary: #9ca3af;
+  --always-white: #fff;
+
+  --border-primary: #d1d5db;
+  --border-hover: #b9c2d0;
+
+  --ff-inter: "Inter", system-ui, sans-serif;
+  --title: 700 2.4rem/3.2rem var(--ff-inter);
+  --label: 600 1.6rem/2rem var(--ff-inter);
+  --paragraph: 500 1.6rem/2.4rem var(--ff-inter);
+  --link: 500 1.4rem/1.6rem var(--ff-inter);
+}
