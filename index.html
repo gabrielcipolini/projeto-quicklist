@@ -31,12 +31,23 @@
       <form action="" class="grid gap-16">
         <input
           type="text"
-          name="newItem"
-          id="newItem"
+          name="inputNewItem"
+          id="inputNewItem"
           placeholder="Adicione um novo item"
         />
-        <button type="submit">Adicionar item</button>
+        <button id="btnSubmit" type="submit">Adicionar item</button>
       </form>
+
+      <ul role="list" class="grid gap-12">
+        <li id="item-0" class="items">
+          <label>
+            <input type="checkbox" />
+            <span>Pão de forma</span>
+          </label>
+
+          <button type="button" id="delete"></button>
+        </li>
+      </ul>
     </main>
 
     <script src="scripts/scripts.js"></script>

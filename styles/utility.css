@@ -3,7 +3,6 @@
   --max-width: 37.5rem;
   width: min(var(--max-width), 100% - var(--px-base) * 2);
   margin-inline: auto;
-
 }
 
 .desktop-only {
@@ -16,6 +15,14 @@
 
 .grid {
   display: grid;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.gap-12 {
+  gap: 1.2rem;
 }
 
 .gap-16 {
