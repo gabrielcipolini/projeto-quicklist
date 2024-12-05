@@ -28,26 +28,27 @@
         <h1>Compras da semana</h1>
       </header>
 
-      <form action="" class="grid gap-16">
-        <input
-          type="text"
-          name="inputNewItem"
-          id="inputNewItem"
-          placeholder="Adicione um novo item"
-        />
-        <button id="btnSubmit" type="submit">Adicionar item</button>
-      </form>
+      <div class="content">
+        <form action="" class="grid gap-16">
+          <input
+            type="text"
+            name="inputNewItem"
+            id="inputNewItem"
+            placeholder="Adicione um novo item"
+          />
+          <button id="btnSubmit" type="submit">Adicionar item</button>
+        </form>
 
-      <ul role="list" class="grid gap-12">
-        <li id="item-0" class="items">
-          <label>
-            <input type="checkbox" />
-            <span>Pão de forma</span>
-          </label>
+        <ul role="list" class="grid gap-12"></ul>
 
-          <button type="button" id="delete"></button>
-        </li>
-      </ul>
+        <div role="alert" id="alert">
+          <img src="assets/icons/alert.svg" alt="Ícone de alerta" />
+          <p>O item foi removido da lista</p>
+          <a href="#" id="closeAlert">
+            <img src="assets/icons/close.svg" alt="" />
+          </a>
+        </div>
+      </div>
     </main>
 
     <script src="scripts/scripts.js"></script>

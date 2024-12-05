@@ -2,6 +2,7 @@
 const form = document.querySelector("form")
 const inputNewItem = document.getElementById("inputNewItem")
 const btnSubmit = document.getElementById("btnSubmit")
+const ul = document.querySelector("ul")
 
 // Manipula o input para receber somente strings e não permitir espaços no início.
 inputNewItem.addEventListener("input", () => {
@@ -17,7 +18,7 @@ form.onsubmit = (event) => {
 
   // Verifica se foi digitado pelo menos 3 caracteres.
   if (inputNewItem.value.length < 3) {
-    alert("O item deve ter pelo menos 3 caracteres.")
+    toggleAlert("length")
   } else {
     addNewItem()
   }
@@ -25,42 +26,34 @@ form.onsubmit = (event) => {
   inputNewItem.value = ""
 }
 
-// Obtendo elementos.
-const ul = document.querySelector("ul")
-
-// Variável para incremento do número do id.
+// Variável de incrimento para o id de cada item criado.
 let numberId = 1
 
-// Cria novos items dentro da lista.
 function addNewItem() {
-  // Criando elementos
   const li = document.createElement("li")
   const label = document.createElement("label")
   const input = document.createElement("input")
   const itemName = document.createElement("span")
   const button = document.createElement("button")
 
-  // Adicionado atributos aos elementos.
+  // Adicionando atributos aos elementos.
   li.id = `item-${numberId++}`
   li.classList.add("items")
   input.type = "checkbox"
   button.type = "button"
   button.id = "delete"
 
-  // Obtém todos os span.
-  const span = document.querySelectorAll("span")
-
-  // Checar itens existente
+  // Verificando se o item já existe na lista
   let itemExists = false
-
-  span.forEach((spans) => {
-    if (spans.textContent.toUpperCase() == inputNewItem.value.toUpperCase()) {
+  const spans = document.querySelectorAll("span")
+  spans.forEach((spans) => {
+    if (spans.textContent.toUpperCase() === inputNewItem.value.toUpperCase()) {
       itemExists = true
     }
   })
 
   if (itemExists) {
-    alert(`Você já adicionou "${inputNewItem.value}" a lista!`)
+    toggleAlert("itemExists")
   } else {
     // Adiciona os elementos criados ao HTML.
     ul.prepend(li)
@@ -71,10 +64,52 @@ function addNewItem() {
     itemName.textContent = inputNewItem.value
 
     // Formatação para começar com letra maiúscula e o restante com minúsculas.
-    let = formatItemName =
+    let formatItemName =
       itemName.textContent.charAt(0).toUpperCase() +
       itemName.textContent.slice(1).toLowerCase()
 
     itemName.textContent = formatItemName
   }
+
+  // Exclui item da lista ao clicar no botão de delete
+  button.addEventListener("click", () => {
+    li.remove()
+    toggleAlert("itemRemoved")
+  })
+}
+
+// Obtendo elementos do alerta.
+const alert = document.getElementById("alert")
+const alertMsg = document.querySelector("#alert p")
+
+// Exibe mensagem de alerta.
+function toggleAlert(msg) {
+  switch (msg) {
+    case "length":
+      alert.style.display = "flex"
+      alertMsg.textContent = `O item deve conter 3 ou mais caracteres.`
+      break
+
+    case "itemExists":
+      alert.style.display = "flex"
+      alertMsg.textContent = `Você já adicionou o "${inputNewItem.value}" à lista!`
+      break
+
+    case "itemRemoved":
+      alert.style.display = "flex"
+      alertMsg.textContent = `O item foi removido da lista`
+      break
+  }
+
+  const closeAlert = document.getElementById("closeAlert")
+
+  // Fechar alerta com clique.
+  closeAlert.addEventListener("click", () => {
+    alert.style.display = "none"
+  })
+
+  // Fechar alerta após 5 segundos.
+  setTimeout(() => {
+    alert.style.display = "none"
+  }, 5000)
 }

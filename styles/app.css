@@ -36,6 +36,9 @@ form {
 
 ul[role="list"] {
   list-style-type: none;
+  max-height: 30vh;
+
+  overflow: auto;
 
   & .items {
     background-color: var(--bg-secondary);
@@ -51,6 +54,43 @@ ul[role="list"] {
       align-items: center;
       gap: 1.2rem;
     }
+  }
+
+  &::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+}
+
+#alert {
+  display: none;
+  align-items: center;
+  gap: 0.8rem;
+
+  background-color: var(--color-danger);
+  border-radius: 1.2rem;
+  color: var(--always-white);
+  font: var(--label);
+  padding: 1.2rem;
+
+  margin-top: 3.6rem;
+
+  & p {
+    width: 100%;
   }
 }
 
