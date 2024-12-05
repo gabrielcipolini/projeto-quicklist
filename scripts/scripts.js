@@ -7,9 +7,9 @@ const ul = document.querySelector("ul")
 // Manipula o input para receber somente strings e não permitir espaços no início.
 inputNewItem.addEventListener("input", () => {
   inputNewItem.value = inputNewItem.value
-    .replace(/[^a-zA-Z\s]/g, "")
-    .trimStart()
-})
+    .replace(/[^a-zA-ZÀ-ÿ\s]/g, "") 
+    .trimStart();
+});
 
 // Captura o evento de submit do formulário.
 form.onsubmit = (event) => {
