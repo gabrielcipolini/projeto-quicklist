@@ -8,7 +8,6 @@ const ul = document.querySelector("ul")
 inputNewItem.addEventListener("input", () => {
   inputNewItem.value = inputNewItem.value
     .replace(/[^a-zA-Z\s]/g, "")
-    .replace(/\s+/g, " ")
     .trimStart()
 })
 
