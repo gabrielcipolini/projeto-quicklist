@@ -1,24 +1,51 @@
-#app {
+main header {
   --m-top: 3.4rem;
+  margin-top: var(--m-top);
 
-  & main header {
-    margin-top: var(--m-top);
-
-    & .go-back {
-      & a {
-        color: var(--color-brand);
-      }
+  & .go-back {
+    & a {
+      color: var(--color-brand);
     }
   }
 }
 
-@media (width >= 800px) {
-  #app {
-    --m-top: 6.2rem;
+form {
+  margin-block: 4.4rem 4rem;
 
-    .logo {
-      margin-top: 2.4rem;
-      text-align: center;
+  & input {
+    background-color: var(--bg-secondary);
+    border-radius: 1.2rem;
+    border: 2px solid var(--border-primary);
+    padding: 0.8rem 1.8rem;
+
+    &::placeholder {
+      color: var(--content-tertiary);
+      font: 400 1.6rem/2.2rem var(--ff-inter);
     }
+  }
+
+  & button {
+    background: var(--color-brand);
+    border: none;
+    border-radius: 1.2rem;
+    color: var(--always-white);
+    font: var(--label);
+    padding: 1.2rem 2.4rem;
+  }
+}
+
+@media (width >= 800px) {
+  main header {
+    --m-top: 6.2rem;
+  }
+
+  .logo {
+    margin-top: 2.4rem;
+    text-align: center;
+  }
+
+  form {
+    grid-template-columns: 70% 1fr;
+    width: 100%;
   }
 }

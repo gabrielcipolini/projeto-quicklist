@@ -15,22 +15,29 @@
     <title>Quicklist</title>
   </head>
   <body>
-    <div id="app" class="container">
-      <div class="logo desktop-only">
-        <img src="assets/logo.svg" alt="Logo quicklist" />
-      </div>
-
-      <main>
-        <header class="grid gap-16">
-          <div class="go-back">
-            <a href="#"> &lt;- Voltar </a>
-          </div>
-
-          <h1>Compras da semana</h1>
-        </header>
-        
-      </main>
+    <div class="logo desktop-only">
+      <img src="assets/logo.svg" alt="Logo quicklist" />
     </div>
+
+    <main class="container">
+      <header class="grid gap-16">
+        <div class="go-back">
+          <a href="#"> &lt;- Voltar </a>
+        </div>
+
+        <h1>Compras da semana</h1>
+      </header>
+
+      <form action="" class="grid gap-16">
+        <input
+          type="text"
+          name="newItem"
+          id="newItem"
+          placeholder="Adicione um novo item"
+        />
+        <button type="submit">Adicionar item</button>
+      </form>
+    </main>
 
     <script src="scripts/scripts.js"></script>
   </body>
