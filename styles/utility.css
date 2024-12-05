@@ -9,9 +9,16 @@
   display: none;
 }
 
-.logo {
-  text-align: center;
-  width: fit-content;
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
+.gap-16 {
+  gap: 1.6rem;
 }
 
 @media (width >= 800px) {

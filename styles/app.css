@@ -1,0 +1,24 @@
+#app {
+  --m-top: 3.4rem;
+
+  & main header {
+    margin-top: var(--m-top);
+
+    & .go-back {
+      & a {
+        color: var(--color-brand);
+      }
+    }
+  }
+}
+
+@media (width >= 800px) {
+  #app {
+    --m-top: 6.2rem;
+
+    .logo {
+      margin-top: 2.4rem;
+      text-align: center;
+    }
+  }
+}
