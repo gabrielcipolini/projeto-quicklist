@@ -7,7 +7,7 @@ const ul = document.querySelector("ul")
 // Manipula o input para receber somente strings e não permitir espaços no início.
 inputNewItem.addEventListener("input", () => {
   inputNewItem.value = inputNewItem.value
-    .replace(/[^a-zA-ZÀ-ÿ\s]/g, "") 
+    .replace(/[0-9]/g, "")  // Remove números
     .trimStart();
 });
 
